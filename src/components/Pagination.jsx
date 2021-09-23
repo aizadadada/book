@@ -16,7 +16,7 @@ const Pagination = () => {
                 {
                     pageNumber.map(item => (
                         <>
-                            <Pagination count={10} size="small" />
+                            {/* <Pagination count={10} size="small" /> */}
                             <li onClick={() => {
                                 changePage(item)
                                 window.scrollTo(0, 0)
