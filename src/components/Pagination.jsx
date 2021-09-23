@@ -16,16 +16,16 @@ const Pagination = () => {
                 {
                     pageNumber.map(item => (
                         <>
-                            <Pagination count={10} size="small" />
-                            <li onClick={() => {
+                            {/* <Pagination count={10} size="small" /> */}
+                            <ul onClick={() => {
                                 changePage(item)
                                 window.scrollTo(0, 0)
-                            }} key={item}>{item}</li>
+                            }} key={item}>{item}</ul>
                         </>
                     ))
                 }
             </ul>
-        </div>
+        </div >
     );
 };
 
