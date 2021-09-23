@@ -46,8 +46,8 @@ code {
   width: 30%;
   height: 40%;
   color: black;
-  /* background-color: white; */
-  background-image: url("https://horoshop.ua/content/uploads/images/novaja-glavnaja.png");
+  background-color: white;
+  /* background-image: url("https://horoshop.ua/content/uploads/images/novaja-glavnaja.png"); */
 }
 
 .content {
@@ -82,7 +82,7 @@ a {
 }
 
 .mainPage {
-  /* background-image: url("https://foodtank.com/wp-content/uploads/2021/07/alfons-morales-YLSwjSy7stw-unsplash.jpg"); */
+  background-image: url("https://foodtank.com/wp-content/uploads/2021/07/alfons-morales-YLSwjSy7stw-unsplash.jpg");
   /* background-image: url("https://cutewallpaper.org/21/books-wallpaper-hd/Books-and-books-HD-wallpaper-Latest-Wallpapers-HD.jpg"); */
 }
 
@@ -95,4 +95,23 @@ a {
 .fisrtPageLink {
   font-style: italic;
   font-size: larger;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.pagin-num {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  color: black;
+  background-color: blue;
+}
+
+.iconContent {
+  width: 50%;
+  transition-duration: 2s;
 }

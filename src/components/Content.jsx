@@ -2,14 +2,16 @@ import React, { useContext, useEffect } from 'react';
 import { clientContext } from '../contexts/ClientContext';
 import MediaCard from './Card';
 import Pagination from './Pagination';
+import Forward5Icon from '@material-ui/icons/Forward5';
 
 
 const Content = () => {
     const { products, getProducts, currentPosts } = useContext(clientContext)
+
     useEffect(() => {
         getProducts()
     }, [])
-    console.log(products)
+
     return (
         <>
             {
@@ -25,7 +27,11 @@ const Content = () => {
                         <Pagination />
                     </div>
                 ) : (
-                    <h2>Loading...</h2>
+                    // <h2>Loading...</h2>
+                    <div className="iconContent">
+
+                        <Forward5Icon />
+                    </div>
                 )
             }
         </>
