@@ -9,7 +9,7 @@ import MainPage from './pages/MainPage';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import FirstPage from "./pages/FirstPage"
-import TheMain from "./pages/TheMain"
+import PayCard from "./components/PayCard"
 
 const Routes = () => {
     return (
@@ -17,14 +17,14 @@ const Routes = () => {
             <AdminContextProvider>
                 <BrowserRouter>
                     <Switch>
-                        <Route exact path="/" component={TheMain} />
-                        <Route exact path="/a" component={FirstPage} />
+                        <Route exact path="/" component={FirstPage} />
                         <Route exact path="/admin" component={AdminPage} />
                         <Route exact path="/edit/:id" component={EditPage} />
                         <Route exact path="/main" component={MainPage} />
                         <Route exact path="/cart" component={CartPage} />
                         <Route exact path="/sign-in" component={SignInPage} />
                         <Route exact path="/sign-up" component={SignUpPage} />
+                        <Route exact path="/payment" component={PayCard} />
 
                     </Switch>
                 </BrowserRouter>

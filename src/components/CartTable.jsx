@@ -32,52 +32,59 @@ export default function CartTable() {
         changeCountProducts(count, id)
     }
     return (
-        <>
-            {
-                cart ? (
-                    <TableContainer component={Paper} >
-                        <Table className={classes.table} aria-label="caption table">
-                            <caption>{cart.totalPrice}</caption>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>№</TableCell>
-                                    <TableCell align="left">Название</TableCell>
-                                    <TableCell align="left">Цена</TableCell>
-                                    <TableCell align="left">Фото</TableCell>
-                                    {/* <TableCell align="left">Цвета</TableCell> */}
-                                    <TableCell align="left">Кол-во</TableCell>
-                                    <TableCell align="left">Общая сумма</TableCell>
+
+        cart ? (
+            <>
+                <TableContainer component={Paper} >
+                    <Table className={classes.table} aria-label="caption table">
+                        <caption>Ваша сумма: {cart.totalPrice}</caption>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>№</TableCell>
+                                <TableCell align="left">Название</TableCell>
+                                <TableCell align="left">Цена</TableCell>
+                                <TableCell align="left">Фото</TableCell>
+                                {/* <TableCell align="left">Цвета</TableCell> */}
+                                <TableCell align="left">Кол-во</TableCell>
+                                <TableCell align="left">Общая сумма</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {cart.products.map((row, index) => (
+                                <TableRow key={row.product.name}>
+                                    <TableCell component="th" scope="row">
+                                        {index + 1}
+                                    </TableCell>
+                                    <TableCell align="left">{row.product.title}</TableCell>
+                                    <TableCell align="left">{row.product.price}</TableCell>
+                                    <TableCell align="left">
+                                        <img width="100" src={row.product.photo} alt="" />
+                                    </TableCell>
+                                    {/* <TableCell align="left">{row.product.color}</TableCell> */}
+                                    <TableCell align="left">
+                                        <input
+                                            type="number"
+                                            value={row.count}
+                                            onChange={(e) => handleChange(row.product.id, e.target.value)}
+                                        />
+                                    </TableCell>
+                                    <TableCell align="left">{row.subPrice}</TableCell>
                                 </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {cart.products.map((row, index) => (
-                                    <TableRow key={row.product.name}>
-                                        <TableCell component="th" scope="row">
-                                            {index + 1}
-                                        </TableCell>
-                                        <TableCell align="left">{row.product.title}</TableCell>
-                                        <TableCell align="left">{row.product.price}</TableCell>
-                                        <TableCell align="left">
-                                            <img width="100" src={row.product.photo} alt="" />
-                                        </TableCell>
-                                        {/* <TableCell align="left">{row.product.color}</TableCell> */}
-                                        <TableCell align="left">
-                                            <input
-                                                type="number"
-                                                value={row.count}
-                                                onChange={(e) => handleChange(row.product.id, e.target.value)}
-                                            />
-                                        </TableCell>
-                                        <TableCell align="left">{row.subPrice}</TableCell>
-                                    </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                ) : (
-                    <h2>Loading...</h2>
-                )
-            }
-        </>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+                <div className="btnPayment">
+                    <Link to="/payment"><Button variant="outlined" color="secondary">Оплатить</Button></Link>
+                </div>
+
+            </>
+        ) : (
+
+            <h2>Loading...</h2>
+
+        )
+
+
     );
 }
