@@ -83,6 +83,7 @@ a {
 
 .mainPage {
   background-image: url("https://foodtank.com/wp-content/uploads/2021/07/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+  opacity: 0.9;
   /* background-image: url("https://cutewallpaper.org/21/books-wallpaper-hd/Books-and-books-HD-wallpaper-Latest-Wallpapers-HD.jpg"); */
 }
 
@@ -92,15 +93,16 @@ a {
   /* background-image: url("https://cutewallpaper.org/21/books-wallpaper-hd/Books-and-books-HD-wallpaper-Latest-Wallpapers-HD.jpg"); */
 }
 
-.fisrtPageLink {
+.firstPageLink {
   font-style: italic;
-  font-size: larger;
+  font-size: 36pxs;
 }
 
 .pagination {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  background-color: #fff;
 }
 
 .pagin-num {
@@ -114,4 +116,8 @@ a {
 .iconContent {
   width: 50%;
   transition-duration: 2s;
+}
+
+.resetBtn {
+  background-color: orange;
 }

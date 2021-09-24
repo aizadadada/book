@@ -61,7 +61,7 @@ const LeftSidebar = () => {
                     </RadioGroup>
                 </FormControl>
             </div>
-            <Button onClick={resetFilter}>Вернуться назад</Button>
+            <Button className="resetBtn" onClick={resetFilter}>Вернуться назад</Button>
         </div>
     );
 };
