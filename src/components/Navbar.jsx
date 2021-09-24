@@ -20,7 +20,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { clientContext } from '../contexts/ClientContext';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router';
-import { purple } from '@material-ui/core/colors';
+
 
 const useStyles = makeStyles((theme) => ({
   grow: {
