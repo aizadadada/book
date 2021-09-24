@@ -2,7 +2,7 @@ import { Button, TextField } from '@material-ui/core';
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 import { adminContext } from '../contexts/AdminContext';
-import Forward5Icon from '@material-ui/icons/Forward5';
+
 
 const EditProduct = () => {
     const { getProductToEdit, productToEdit, saveEditedProduct } = useContext(adminContext)

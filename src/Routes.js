@@ -9,6 +9,7 @@ import MainPage from './pages/MainPage';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import FirstPage from "./pages/FirstPage"
+import TheMain from "./pages/TheMain"
 
 const Routes = () => {
     return (
@@ -16,7 +17,8 @@ const Routes = () => {
             <AdminContextProvider>
                 <BrowserRouter>
                     <Switch>
-                        <Route exact path="/" component={FirstPage} />
+                        <Route exact path="/" component={TheMain} />
+                        <Route exact path="/a" component={FirstPage} />
                         <Route exact path="/admin" component={AdminPage} />
                         <Route exact path="/edit/:id" component={EditPage} />
                         <Route exact path="/main" component={MainPage} />

@@ -170,9 +170,9 @@ const ClientContextProvider = ({ children }) => {
             alert(e.response.data.message)
         }
     }
-    const firstPage = () => {
-        window.location.assign("http://localhost:3001/main")
-        // history.push("/main")
+    const firstPage = (history) => {
+        window.location.assign("http://localhost:3000/main")
+        history.push("/main")
     }
 
 
