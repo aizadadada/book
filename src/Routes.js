@@ -10,6 +10,7 @@ import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import FirstPage from "./pages/FirstPage"
 import TheMain from "./pages/TheMain"
+import PaymentForm from './payment/PaymentForm';
 
 const Routes = () => {
     return (
@@ -25,6 +26,8 @@ const Routes = () => {
                         <Route exact path="/cart" component={CartPage} />
                         <Route exact path="/sign-in" component={SignInPage} />
                         <Route exact path="/sign-up" component={SignUpPage} />
+                        <Route exact path="/payment" component={PaymentForm} />
+
 
                     </Switch>
                 </BrowserRouter>
