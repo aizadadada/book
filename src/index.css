@@ -73,7 +73,7 @@ a {
 }
 
 .AppBar {
-  background-color: #ffcc80 !important;
+  background-color: #A0522D!important;
 }
 
 .pagination {
@@ -82,7 +82,7 @@ a {
 }
 
 .mainPage {
-  background-image: url("https://foodtank.com/wp-content/uploads/2021/07/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+  background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/job545-wit-31.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=631bc7a3af2f83ae1c4566602e068980");
   opacity: 0.9;
   /* background-image: url("https://cutewallpaper.org/21/books-wallpaper-hd/Books-and-books-HD-wallpaper-Latest-Wallpapers-HD.jpg"); */
 }
@@ -100,9 +100,11 @@ a {
 
 .pagination {
   display: flex;
-  justify-content: space-between;
+  text-align: center;
+  justify-content: space-evenly;
   flex-direction: row;
   background-color: #fff;
+  height: 20px;
 }
 
 .pagin-num {
@@ -120,4 +122,74 @@ a {
 
 .resetBtn {
   background-color: orange;
+}
+
+.pageOne {
+  width: 80%;
+  height: 100%;
+}
+
+.cardPage {
+  background: whitesmoke;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.card-inputs {
+  margin-top: 10px;
+  width: 20%;
+  margin: 0 auto;
+  background-color: lightgray;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-inputs input {
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+
+.card-inputs button {
+  background-color: rgb(132, 207, 142);
+  outline: none;
+  border: none;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+*/ .first-tense {
+  font-size: 36px;
+  font-family: serif;
+}
+
+p {
+  font-style: italic;
+  /* font-family: italic; */
+  margin-top: 0;
+}
+
+.second-tense {
+  font-size: 36px;
+  font-family: serif;
+}
+
+.btnMain {
+  display: flex;
+  margin-left: 40px;
+}
+
+.btnPayment {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagin {
+  color: whitesmoke;
 }

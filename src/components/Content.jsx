@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { clientContext } from '../contexts/ClientContext';
 import MediaCard from './Card';
-import Pagination from './Pagination';
+import PPagination from './PPagination';
 import Forward5Icon from '@material-ui/icons/Forward5';
 
 
@@ -16,16 +16,18 @@ const Content = () => {
         <>
             {
                 products ? (
-                    <div className="content">
-                        <div className="content-block">
-                            {
-                                currentPosts.map(item => (
-                                    <MediaCard item={item} key={item.id} />
-                                ))
-                            }
+                    <>
+                        <div className="content">
+                            <div className="content-block">
+                                {
+                                    currentPosts.map(item => (
+                                        <MediaCard item={item} key={item.id} />
+                                    ))
+                                }
+                            </div>
+                            <PPagination />
                         </div>
-                        <Pagination />
-                    </div>
+                    </>
                 ) : (
                     // <h2>Loading...</h2>
                     <div className="iconContent">

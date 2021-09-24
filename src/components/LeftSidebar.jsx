@@ -45,8 +45,7 @@ const LeftSidebar = () => {
                     <FormControlLabel value="300" control={<Radio />} label="300" />
                     <FormControlLabel value="500" control={<Radio />} label="500" />
                     <FormControlLabel value="700" control={<Radio />} label="1000" />
-                    {/* <FormControlLabel value="1000" control={<Radio />} label="1000" /> */}
-                    {/* <FormControlLabel value="2000" control={<Radio />} label="2000" /> */}
+                    <FormControlLabel value="2000" control={<Radio />} label="2000" />
                 </RadioGroup>
             </FormControl>
             <div>
